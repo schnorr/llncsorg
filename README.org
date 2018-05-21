@@ -1,5 +1,7 @@
 # ieeeorg
-The LLNCS in OrgMode, just type make.
+The LNCS in OrgMode, just type make. The ORG file is
+named =llncs= (with two "l"s, and not one) because the Latex class is
+llncs, and not lncs as one would expect. But anyways, just type make.
 
 Be aware that this example is compatible with OrgMode 9.*. Earlier
 or later OrgMode versions may require minor modifications to the Makefile
