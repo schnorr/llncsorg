@@ -20,24 +20,6 @@
 # You need at least Org 9 and Emacs 24 to make this work.
 # If you do, just type make (thanks Luka Stanisic for this).
 
-* Springer's LNCS configuration for org export + ignore tag (Start Here) :noexport:
-
-#+begin_src emacs-lisp :results output :session :exports both
-(add-to-list 'load-path ".")
-(require 'ox-extra)
-(ox-extras-activate '(ignore-headlines))
-(add-to-list 'org-latex-classes
-             '("LLNCS"
-               "\\documentclass{llncs}"
-               ("\\section{%s}" . "\\section*{%s}")
-               ("\\subsection{%s}" . "\\subsection*{%s}")
-               ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
-               ("\\paragraph{%s}" . "\\paragraph*{%s}")
-               ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
-#+end_src
-
-#+RESULTS:
-
 * *The Paper*                                                       :ignore:
 ** Latex configurations                                             :ignore:
 ** Frontpage                                                        :ignore:
@@ -145,3 +127,17 @@ Tangle this file with C-c C-v t
 
 
 #+end_src
+* Emacs setup                                                      :noexport:
+# Local Variables:
+# eval: (add-to-list 'load-path ".")
+# eval: (require 'ox-extra)
+# eval: (ox-extras-activate '(ignore-headlines))
+# eval: (add-to-list 'org-latex-classes
+#               '("LLNCS"
+#                 "\\documentclass{llncs}"
+#                 ("\\section{%s}" . "\\section*{%s}")
+#                 ("\\subsection{%s}" . "\\subsection*{%s}")
+#                 ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
+#                 ("\\paragraph{%s}" . "\\paragraph*{%s}")
+#                 ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
+# End:
